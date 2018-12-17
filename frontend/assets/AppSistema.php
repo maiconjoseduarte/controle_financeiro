@@ -29,7 +29,7 @@ class AppSistema extends AssetBundle
     ];
 
     public $js = [
-        'sistema/bower_components/jquery/dist/jquery.min.js',
+//        'sistema/bower_components/jquery/dist/jquery.min.js',
         'sistema/bower_components/jquery-ui/jquery-ui.min.js',
         'sistema/bower_components/bootstrap/dist/js/bootstrap.min.js',
         'sistema/bower_components/raphael/raphael.min.js',
