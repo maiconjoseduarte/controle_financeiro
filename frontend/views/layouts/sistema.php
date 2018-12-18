@@ -505,8 +505,11 @@ AppSistema::register($this);
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 ]) ?>
             </ol>
-            <?= Alert::widget() ?>
         </section>
+
+        <div style="margin: 30px 15px 0px 15px;">
+            <?= Alert::widget() ?>
+        </div>
 
         <section class="content">
 

@@ -67,8 +67,17 @@ class FaculdadeController extends Controller
     {
         $model = new Faculdade();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        try{
+            if ($model->load(Yii::$app->request->post())) {
+
+                $model->calcula();
+                $model->save();
+
+                Yii::$app->session->setFlash('success', 'Registro salvo com sucesso.');
+                return $this->redirect(['index']);
+            }
+        } catch (\Exception $e) {
+            Yii::$app->session->addFlash('error','Falha ao cadastrar novo registro');
         }
 
         return $this->render('create', [

@@ -16,11 +16,11 @@ use yii\widgets\ActiveForm;
     ]); ?>
     <div class="row">
         <div class="col-md-3">
-            <?= $form->field($model, 'nome') ?>
+            <?= $form->field($model, 'nome')->dropDownList(\frontend\models\Faculdade::$NOMES, ['prompt' => 'Selecione']) ?>
         </div>
 
         <div class="col-md-3">
-            <?= $form->field($model, 'semestre') ?>
+            <?= $form->field($model, 'semestre')->dropDownList(\frontend\models\Faculdade::$SEMESTRE) ?>
         </div>
 
         <div class="col-md-3">

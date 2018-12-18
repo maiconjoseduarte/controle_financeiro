@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <div class="box-body-controle">
-        <?= Html::a("<i class='fa fa-plus'></i>",['create'], ['class' => 'btn btn-success', 'style' => 'float: right; margin: 3px;']) ?>
+        <?= Html::a("<i class='fa fa-plus'> Cadastrar</i>",['create'], ['class' => 'btn btn-success', 'style' => 'float: right; margin: 3px;']) ?>
         <br>
         <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'filterModel' => $searchModel,
             'columns' => [
 
+                ['class' => 'yii\grid\ActionColumn'],
                 'nome',
                 'semestre',
                 'parcela',
@@ -33,8 +34,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'dataPagamento',
                 'valorPago',
                 //'dataCriacao',
+                'desconto',
+                'juros',
 
-                ['class' => 'yii\grid\ActionColumn'],
             ],
         ]); ?>
     </div>

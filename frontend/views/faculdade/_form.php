@@ -15,13 +15,13 @@ use kartik\datecontrol\DateControl;
 
     <div class="row">
         <div class="col-md-3">
-            <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'nome')->dropDownList(\frontend\models\Faculdade::$NOMES, ['prompt' => 'Selecione']) ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'semestre')->textInput() ?>
+            <?= $form->field($model, 'semestre')->dropDownList(\frontend\models\Faculdade::$SEMESTRE) ?>
         </div>
         <div class="col-md-3">
-            <?= $form->field($model, 'parcela')->textInput() ?>
+            <?= $form->field($model, 'parcela')->textInput()?>
         </div>
         <div class="col-md-3">
             <?= $form->field($model, 'dataVencimento')->widget(DateControl::className(), [
@@ -36,6 +36,7 @@ use kartik\datecontrol\DateControl;
                 ]
             ]) ?>
         </div>
+
     </div>
     <div class="row">
         <div class="col-md-3">
