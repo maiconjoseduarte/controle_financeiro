@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="box-controle">
     <div class="box-header-controle">
-        <h2 class="title-header"><i class="fa fa-globe"></i><?= Html::encode($this->title) ?></h2>
+        <h2 class="title-header"><i class="fa fa-globe"></i> <?= Html::encode($this->title) ?></h2>
     </div>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -26,9 +26,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'dataProvider' => $dataProvider,
 //            'filterModel' => $searchModel,
             'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
+//                ['class' => 'yii\grid\SerialColumn'],
 
-                'id',
+//                'id',
                 'idCategoria',
                 'descricao',
                 'valorPrevisto',

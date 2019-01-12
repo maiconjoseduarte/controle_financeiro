@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use frontend\models\Categoria;
 use Yii;
 use frontend\models\Metas;
 use frontend\models\MetasSearch;
@@ -124,5 +125,10 @@ class MetasController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionListMenus($search = null, $ids = null){
+        Yii::$app->response->format = 'json';
+        return Categoria::select2Data($search, $ids);
     }
 }

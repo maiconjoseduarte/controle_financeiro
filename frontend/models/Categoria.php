@@ -50,4 +50,28 @@ class Categoria extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Metas::className(), ['idCategoria' => 'id']);
     }
+
+    /**
+     * @param null $searchTerm
+     * @param null $ids
+     * @return array
+     */
+    static public function select2Data($searchTerm = null, $ids = null){
+        $results = [];
+
+        $query = Categoria::find();
+
+        if (!is_null($searchTerm)) {
+            $query->andWhere(['like', 'nome', $searchTerm])->limit(50);
+        }
+
+        $categorias = $query->all();
+
+        /** @var Categoria[] $categorias */
+        foreach($categorias as $categoria){
+            $results[] = ['id' => $categoria->id, 'text' => "{$categoria->nome} "];
+        }
+
+        return $results;
+    }
 }

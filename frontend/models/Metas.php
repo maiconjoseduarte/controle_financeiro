@@ -48,7 +48,7 @@ class Metas extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'idCategoria' => 'Id Categoria',
+            'idCategoria' => 'Categoria',
             'descricao' => 'Descricao',
             'valorPrevisto' => 'Valor Previsto',
             'valorGasto' => 'Valor Gasto',

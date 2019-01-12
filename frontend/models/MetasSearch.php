@@ -11,15 +11,25 @@ use frontend\models\Metas;
  */
 class MetasSearch extends Metas
 {
+    public $status;
+
+    public static $STATUS = [
+        3 => 'Todos',
+        0 => 'Pendente',
+        1 => 'Em andamento',
+        2 => 'Concluido',
+    ];
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['id', 'idCategoria', 'status'], 'integer'],
+            [['id', 'idCategoria'], 'integer'],
             [['descricao', 'dataVencimento'], 'safe'],
             [['valorPrevisto', 'valorGasto'], 'number'],
+            [['status'], 'in', 'range' => array_keys(self::$STATUS)]
         ];
     }
 
@@ -64,8 +74,14 @@ class MetasSearch extends Metas
             'valorPrevisto' => $this->valorPrevisto,
             'valorGasto' => $this->valorGasto,
             'dataVencimento' => $this->dataVencimento,
-            'status' => $this->status,
+//            'status' => $this->status,
         ]);
+
+        if ($this->status != 3) {
+            $query->andFilterWhere([
+                'status' => $this->status
+            ]);
+        }
 
         $query->andFilterWhere(['like', 'descricao', $this->descricao]);
 
