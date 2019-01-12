@@ -320,33 +320,26 @@ AppSistema::register($this);
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="active treeview">
-                <a href="#">
+            <li class="active">
+                <a href=<?= \yii\helpers\Url::to(['site/index']) ?>>
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
             </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                    <li><a href=<?= \yii\helpers\Url::to(['faculdade/index']) ?>><i class="fa fa-circle-o"></i> Faculdade</a></li>
-                </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-files-o"></i>
-                    <span>Layout Options</span>
+            <li>
+                <a href=<?= \yii\helpers\Url::to(['faculdade/index']) ?>>
+                    <i class="fa fa-th"></i> <span>Faculdade</span>
                     <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
             </span>
                 </a>
-                <ul class="treeview-menu">
-                    <li class="active"><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                    <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                    <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-                </ul>
+            </li>
+            <li>
+                <a href=<?= \yii\helpers\Url::to(['categoria/index']) ?>>
+                    <i class="fa fa-th"></i> <span>Categoria</span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
             </li>
             <li>
                 <a href="pages/widgets.html">
