@@ -342,6 +342,13 @@ AppSistema::register($this);
                 </a>
             </li>
             <li>
+                <a href=<?= \yii\helpers\Url::to(['metas/index']) ?>>
+                    <i class="fa fa-th"></i> <span>Metas</span>
+                    <span class="pull-right-container">
+            </span>
+                </a>
+            </li>
+            <li>
                 <a href="pages/widgets.html">
                     <i class="fa fa-th"></i> <span>Widgets</span>
                     <span class="pull-right-container">
