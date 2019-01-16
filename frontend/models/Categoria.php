@@ -65,6 +65,8 @@ class Categoria extends \yii\db\ActiveRecord
             $query->andWhere(['like', 'nome', $searchTerm])->limit(50);
         }
 
+        $query->orderBy(['nome' => SORT_ASC]);
+
         $categorias = $query->all();
 
         /** @var Categoria[] $categorias */

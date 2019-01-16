@@ -63,6 +63,8 @@ class CategoriaSearch extends Categoria
 
         $query->andFilterWhere(['like', 'nome', $this->nome]);
 
+        $query->orderBy(['nome' => SORT_ASC]);
+
         return $dataProvider;
     }
 }
