@@ -14,6 +14,7 @@ use Yii;
  * @property double $valorGasto
  * @property string $dataVencimento
  * @property int $status
+ * @property string $observacoes
  *
  * @property Categoria $categoria
  */
@@ -36,7 +37,7 @@ class Metas extends \yii\db\ActiveRecord
             [['idCategoria', 'status'], 'integer'],
             [['valorPrevisto', 'valorGasto'], 'number'],
             [['dataVencimento'], 'safe'],
-            [['descricao'], 'string', 'max' => 255],
+            [['descricao', 'observacoes'], 'string', 'max' => 255],
             [['idCategoria'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['idCategoria' => 'id']],
         ];
     }
@@ -54,6 +55,7 @@ class Metas extends \yii\db\ActiveRecord
             'valorGasto' => 'Valor Gasto',
             'dataVencimento' => 'Data Vencimento',
             'status' => 'Status',
+            'observacoes' => 'Observacoes',
         ];
     }
 

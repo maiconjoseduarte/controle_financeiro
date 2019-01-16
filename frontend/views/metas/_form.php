@@ -48,6 +48,11 @@ $categoriaListUrl = Url::to(['list-menus']);
             <?= $form->field($model, 'status')->dropDownList(\frontend\models\MetasSearch::$STATUS) ?>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'observacoes')->textarea() ?>
+        </div>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton('Salvar', ['class' => 'btn btn-success']) ?>
