@@ -36,3 +36,10 @@
     height: auto;
     margin-top: 0px;
 }
+
+.point{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    display:inline-block
+}
