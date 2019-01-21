@@ -1,6 +1,7 @@
 <?php
 
 use common\components\Icones;
+use frontend\models\Metas;
 use yii\helpers\Html;
 use kartik\grid\GridView;
 
@@ -46,13 +47,43 @@ $this->params['breadcrumbs'][] = $this->title;
                 'descricao',
                 [
                     'attribute' => 'valorPrevisto',
-//                    'format' => 'currency',
+                    'hAlign' => 'right',
+                    'value' => function ($model) {
+                        /** @var Metas $model */
+                        if ($model->valorPrevisto != null) {
+                            return Yii::$app->formatter->asDecimal($model->valorPrevisto,2);
+                        }
 
+                        return null;
+                    },
                 ],
-                'valorGasto',
-                'dataVencimento',
+                [
+                    'attribute' => 'valorGasto',
+                    'hAlign' => 'right',
+                    'value' => function ($model) {
+                        /** @var Metas $model */
+                        if ($model->valorGasto != null) {
+                            return Yii::$app->formatter->asDecimal($model->valorGasto,2);
+                        }
+
+                        return null;
+////                        return $model->dataVencimento ? $vencimentoFormatter->format(DateTimeUtils::dbStringToDatetime($model->vencimento)) : null;
+//                        return Yii::$app->formatter->asDate(strtotime($model->dataVencimento),'php: d/m/Y');
+                    },
+                ],
+                [
+                    'attribute' => 'dataVencimento',
+                    'hAlign' => 'center',
+                    'format' => ['date', 'php:d/m/Y'],
+//                    'value' => function ($model) {
+//                        /** @var Metas $model */
+////                        return $model->dataVencimento ? $vencimentoFormatter->format(DateTimeUtils::dbStringToDatetime($model->vencimento)) : null;
+//                        return Yii::$app->formatter->asDate(strtotime($model->dataVencimento),'php: d/m/Y');
+//                    },
+                ],
                 [
                     'attribute' => 'status',
+                    'hAlign' => 'center',
                     'format' => 'html',
                     'value' => function ($model) {
                         $status = '';

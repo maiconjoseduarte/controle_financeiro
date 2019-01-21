@@ -34,6 +34,7 @@ class Metas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['idCategoria', 'descricao'], 'required'],
             [['idCategoria', 'status'], 'integer'],
             [['valorPrevisto', 'valorGasto'], 'number'],
             [['dataVencimento'], 'safe'],

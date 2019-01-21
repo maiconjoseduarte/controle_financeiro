@@ -10,12 +10,17 @@ $this->params['breadcrumbs'][] = ['label' => 'Metas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="metas-update">
+<div class="box-controle">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="box-header-controle">
+        <h2><?= Html::encode($this->title) ?></h2>
+    </div>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+    <div class="box-body-controle">
+
+        <?= $this->render('_form', [
+            'model' => $model,
+        ]) ?>
+    </div>
 
 </div>
