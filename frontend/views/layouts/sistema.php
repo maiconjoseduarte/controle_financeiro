@@ -496,25 +496,14 @@ AppSistema::register($this);
 
 
     <div class="content-wrapper">
-        <section class="content-header">
-            <h1>
-                <small>Control panel</small>
-            </h1>
-            <ol class="breadcrumb">
-                <?= Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]) ?>
-            </ol>
-        </section>
-
-        <div style="margin: 30px 15px 0px 15px;">
-            <?= Alert::widget() ?>
+        <div style="width: 100%; height:20px; padding: 15px;">
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
         </div>
 
         <section class="content">
-
             <?= $content ?>
-
         </section>
     </div>
 

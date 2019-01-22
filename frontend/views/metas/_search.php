@@ -80,8 +80,11 @@ $categoriaListUrl = Url::to(['list-menus']);
         </div>
     </div>
 
+    <br>
     <div class="form-group">
-        <?= Html::submitButton('Pesquisar', ['class' => 'btn btn-primary']) ?>
+    <?php echo Html::submitButton("<i class='fa fa-filter'> Pesquisar</i>", ['class' => 'btn btn-primary']) ?>
+        <?= Html::a("<i class='fa fa-plus'> Cadastrar</i>",['create'], ['class' => 'btn btn-success', 'style' => ' margin: 3px;']) ?>
+
         <?php // echo Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>
     </div>
 
