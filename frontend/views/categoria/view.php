@@ -6,14 +6,17 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Categoria */
 
-$this->title = $model->id;
+$this->title = $model->nome;
 $this->params['breadcrumbs'][] = ['label' => 'Categorias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="categoria-view">
+<div class="box-controle">
+    <div class="box-header-controle">
+        <h2 class="title-header"><i class="fa fa-globe"></i> <?= Html::encode($this->title) ?></h2>
+    </div>
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="box-body-controle">
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -33,5 +36,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'nome',
         ],
     ]) ?>
+    </div>
 
 </div>

@@ -21,7 +21,8 @@ use yii\widgets\ActiveForm;
         </div>
     </div>
     <div class="form-group">
-        <?= Html::submitButton('Pesquisar', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton("<i class='fa fa-filter'> Pesquisar</i>", ['class' => 'btn btn-primary']) ?>
+        <?= Html::a("<i class='fa fa-plus'> Cadastrar</i>", ['create'],['class' => 'btn btn-success']) ?>
         <?php // echo Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>
     </div>
 
