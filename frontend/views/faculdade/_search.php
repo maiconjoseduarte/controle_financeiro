@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
         </div>
 
         <div class="col-md-3">
-            <?= $form->field($model, 'semestre')->dropDownList(\frontend\models\Faculdade::$SEMESTRE) ?>
+            <?= $form->field($model, 'semestre')->dropDownList(\frontend\models\Faculdade::$SEMESTRE, ['prompt' => 'Selecione']) ?>
         </div>
 
         <div class="col-md-3">
@@ -46,7 +46,9 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'dataCriacao') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Pesquisar', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton("<i class='fa fa-filter'> Pesquisar</i>", ['class' => 'btn btn-primary']) ?>
+        <?= Html::a("<i class='fa fa-plus'> Cadastrar</i>",['create'], ['class' => 'btn btn-success', 'style' => ' margin: 3px;']) ?>
+
         <?php // Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>
     </div>
 

@@ -24,19 +24,8 @@ class Faculdade extends \yii\db\ActiveRecord
 {
     // Nomes
 
-    const MAICON = 'maicon';
-    const MONICA = 'monica';
-
-    // Semestres
-    const S20171 = '2017/1';
-    const S20172 = '2017/2';
-    const S20181 = '2018/1';
-    const S20182 = '2018/2';
-    const S20191 = '2019/1';
-    const S20192 = '2019/2';
-    const S20201 = '2020/1';
-    const S20202 = '2020/2';
-
+    const MAICON = 1;
+    const MONICA = 2;
 
     public static $NOMES = [
         self::MAICON => 'Maicon',
@@ -44,14 +33,14 @@ class Faculdade extends \yii\db\ActiveRecord
     ];
 
     public static $SEMESTRE = [
-        self::S20171 => '2017/1',
-        self::S20172 => '2017/2',
-        self::S20181 => '2018/1',
-        self::S20182 => '2018/2',
-        self::S20191 => '2019/1',
-        self::S20192 => '2019/2',
-        self::S20201 => '2020/1',
-        self::S20202 => '2020/2',
+        1 => '2017/1',
+        2 => '2017/2',
+        3 => '2018/1',
+        4 => '2018/2',
+        5 => '2019/1',
+        6 => '2019/2',
+        7 => '2020/1',
+        8 => '2020/2',
     ];
 
 //    const P1 = '1';
