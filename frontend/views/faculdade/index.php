@@ -10,7 +10,7 @@ use yii\helpers\Url;
 /* @var $searchModel frontend\models\FaculdadeSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = ' Faculdade';
+$this->title = ' Faculdade somente teste';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="box-controle">
